@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0c" />
+  <meta name="description" content="New Golden Brass Band — The Sound of Celebration. Premium brass band services for weddings, processions, and cultural events in Deola, Maharashtra." />
+  <title>New Golden Brass Band · The Sound of Celebration</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #08080a; --bg-elevated: #101014; --surface: #16161c;
+      --glass: rgba(18,18,24,0.72); --glass-border: rgba(255,255,255,0.07);
+      --text: #f7f7f9; --text-2: #a4a4ae; --text-3: #6c6c78; --text-4: #4a4a54;
+      --gold: #d4af37; --gold-light: #e8c65a; --gold-dark: #a8862a; --gold-glow: rgba(212,175,55,0.35);
+      --green: #34d399; --green-bg: rgba(52,211,153,0.1);
+      --red: #f87171; --red-bg: rgba(248,113,113,0.1);
+      --amber: #fbbf24; --amber-bg: rgba(251,191,36,0.1);
+      --radius-md: 16px; --radius-lg: 24px; --radius-xl: 32px; --radius-pill: 999px;
+      --shadow-md: 0 12px 32px -8px rgba(0,0,0,0.5);
+      --shadow-lg: 0 30px 60px -20px rgba(0,0,0,0.7);
+      --shadow-gold: 0 12px 40px -10px rgba(212,175,55,0.4);
+      --ease: cubic-bezier(0.16,1,0.3,1); --nav-h: 72px;
+    }
+    *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:var(--nav-h); -webkit-text-size-adjust:100%; }
+    body { font-family:'Inter',system-ui,-apple-system,sans-serif; font-size:16px; line-height:1.6;
+      color:var(--text); background:var(--bg); overflow-x:hidden;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; min-height:100vh; }
+    body.no-scroll { overflow:hidden; }
+    body::before { content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+      background: radial-gradient(ellipse 80% 60% at 15% 0%, rgba(212,175,55,0.07), transparent 55%),
+                  radial-gradient(ellipse 70% 50% at 85% 100%, rgba(80,80,160,0.09), transparent 55%); }
+    img,video { max-width:100%; height:auto; display:block; }
+    button,input,select,textarea { font:inherit; color:inherit; }
+    button { cursor:pointer; background:none; border:none; }
+    a { color:inherit; text-decoration:none; }
+    ul { list-style:none; }
+    ::-webkit-scrollbar { width:8px; height:8px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:#2a2a34; border-radius:4px; }
+    :focus-visible { outline:2px solid var(--gold); outline-offset:3px; border-radius:4px; }
+
+    .container { width:100%; max-width:1320px; margin-inline:auto; padding-inline:24px; position:relative; z-index:2; }
+    @media (min-width:768px) { .container { padding-inline:40px; } }
+    .section { padding-block: clamp(72px,10vw,120px); position:relative; z-index:2; }
+
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:0.72rem; font-weight:600;
+      letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .eyebrow::before { content:''; width:24px; height:1px; background:linear-gradient(90deg,transparent,var(--gold)); }
+    .section-title { font-size:clamp(1.85rem,4.5vw,3rem); font-weight:700; letter-spacing:-0.03em; line-height:1.1; margin-bottom:16px; }
+    .section-lead { font-size:clamp(0.95rem,1.5vw,1.1rem); color:var(--text-2); max-width:620px; line-height:1.7; }
+    .text-center { text-align:center; } .text-center .section-lead { margin-inline:auto; }
+    .text-center .eyebrow { justify-content:center; }
+
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:0 26px;
+      height:52px; font-size:0.9rem; font-weight:600; letter-spacing:-0.01em; border-radius:var(--radius-pill);
+      border:1px solid transparent; transition:all 0.35s var(--ease); white-space:nowrap; position:relative;
+      overflow:hidden; -webkit-tap-highlight-color:transparent; }
+    .btn-primary { background:linear-gradient(135deg,var(--gold-light),var(--gold)); color:#0a0a0c; box-shadow:var(--shadow-gold); }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 18px 50px -10px rgba(212,175,55,0.55); }
+    .btn-secondary { background:rgba(255,255,255,0.05); color:var(--text); border-color:rgba(255,255,255,0.12);
+      -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); }
+    .btn-secondary:hover { background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.25); transform:translateY(-2px); }
+    .btn-block { width:100%; }
+    .btn-sm { height:34px; padding:0 14px; font-size:0.78rem; border-radius:9px; }
+    .btn:disabled { opacity:0.5; cursor:not-allowed; transform:none !important; }
+
+    .nav { position:fixed; top:0; left:0; right:0; height:var(--nav-h); z-index:1000;
+      transition:all 0.4s var(--ease); display:flex; align-items:center; }
+    .nav::before { content:''; position:absolute; inset:0; background:rgba(8,8,10,0.72);
+      -webkit-backdrop-filter:blur(24px) saturate(150%); backdrop-filter:blur(24px) saturate(150%);
+      border-bottom:1px solid transparent; opacity:0; transition:opacity 0.4s var(--ease); z-index:-1; }
+    .nav.scrolled::before { opacity:1; border-bottom-color:var(--glass-border); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; width:100%; gap:16px; }
+    .nav-brand { display:flex; align-items:center; gap:12px; font-weight:700; font-size:1rem; letter-spacing:-0.02em; flex-shrink:0; }
+    .nav-mark { width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg,var(--gold-light),var(--gold-dark));
+      display:grid; place-items:center; font-size:0.85rem; font-weight:800; color:#0a0a0c; box-shadow:0 4px 16px -4px var(--gold-glow); flex-shrink:0; }
+    .nav-brand-text { display:none; line-height:1.15; }
+    .nav-brand-text small { display:block; font-size:0.6rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); opacity:0.9; }
+    @media (min-width:480px) { .nav-brand-text { display:block; } }
+    .nav-links { display:none; align-items:center; gap:4px; margin-left:auto; }
+    .nav-link { padding:10px 16px; font-size:0.85rem; font-weight:500; color:var(--text-2); border-radius:var(--radius-pill); transition:all 0.3s var(--ease); }
+    .nav-link:hover { color:var(--text); background:rgba(255,255,255,0.05); }
+    .nav-actions { display:none; align-items:center; gap:10px; }
+    .nav-actions .btn { height:42px; padding:0 20px; font-size:0.82rem; }
+    @media (min-width:960px) { .nav-links,.nav-actions { display:flex; } .nav-toggle { display:none; } }
+    .nav-toggle { width:44px; height:44px; display:grid; place-items:center; border-radius:12px;
+      background:rgba(255,255,255,0.05); border:1px solid var(--glass-border); transition:all 0.3s var(--ease); flex-shrink:0; }
+    .nav-toggle-icon { position:relative; width:20px; height:14px; }
+    .nav-toggle-icon span { position:absolute; left:0; width:100%; height:2px; background:var(--text); border-radius:2px; transition:all 0.35s var(--ease); }
+    .nav-toggle-icon span:nth-child(1) { top:0; } .nav-toggle-icon span:nth-child(2) { top:6px; } .nav-toggle-icon span:nth-child(3) { top:12px; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(1) { top:6px; transform:rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(2) { opacity:0; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-icon span:nth-child(3) { top:6px; transform:rotate(-45deg); }
+
+    .lang-switch {
+      display:inline-flex; align-items:center; padding:3px;
+      border-radius:var(--radius-pill);
+      background:rgba(255,255,255,0.05);
+      border:1px solid var(--glass-border);
+      -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+      gap:2px; flex-shrink:0;
+    }
+    .lang-btn {
+      padding:6px 12px; border-radius:var(--radius-pill);
+      font-size:0.72rem; font-weight:600; letter-spacing:0.02em;
+      color:var(--text-2); transition:all 0.3s var(--ease);
+      line-height:1; white-space:nowrap;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .lang-btn:hover { color:var(--text); }
+    .lang-btn.active {
+      background:linear-gradient(135deg,var(--gold-light),var(--gold));
+      color:#0a0a0c; box-shadow:0 4px 14px -4px var(--gold-glow);
+    }
+    .lang-switch-nav { display:none; }
+    @media (min-width:640px) { .lang-switch-nav { display:inline-flex; margin-left:12px; } }
+    .nav-lang-mobile { display:inline-flex; }
+    @media (min-width:640px) { .nav-lang-mobile { display:none; } }
+
+    .drawer { position:fixed; inset:0; z-index:999; background:rgba(8,8,10,0.97);
+      -webkit-backdrop-filter:blur(30px); backdrop-filter:blur(30px); display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:8px; padding:80px 24px 40px; opacity:0; visibility:hidden;
+      transition:opacity 0.35s var(--ease),visibility 0.35s; }
+    .drawer.open { opacity:1; visibility:visible; }
+    .drawer-link { font-size:1.6rem; font-weight:600; letter-spacing:-0.02em; padding:14px 28px; border-radius:var(--radius-md);
+      transition:all 0.3s var(--ease); opacity:0; transform:translateY(20px); }
+    .drawer.open .drawer-link { opacity:1; transform:translateY(0); }
+    .drawer.open .drawer-link:nth-child(1) { transition-delay:0.05s; }
+    .drawer.open .drawer-link:nth-child(2) { transition-delay:0.1s; }
+    .drawer.open .drawer-link:nth-child(3) { transition-delay:0.15s; }
+    .drawer.open .drawer-link:nth-child(4) { transition-delay:0.2s; }
+    .drawer.open .drawer-link:nth-child(5) { transition-delay:0.25s; }
+    .drawer.open .drawer-link:nth-child(6) { transition-delay:0.3s; }
+    .drawer-link:hover { color:var(--gold); background:rgba(255,255,255,0.04); }
+    .drawer-cta { margin-top:24px; opacity:0; transform:translateY(20px); }
+    .drawer.open .drawer-cta { opacity:1; transform:translateY(0); transition:all 0.4s var(--ease) 0.35s; }
+    .drawer .lang-switch { margin-top:24px; }
+
+    .hero { position:relative; min-height:100vh; min-height:100dvh; display:flex; align-items:center;
+      justify-content:center; overflow:hidden; padding:calc(var(--nav-h) + 40px) 0 80px; isolation:isolate; }
+    .hero-media { position:absolute; inset:0; z-index:-2; overflow:hidden; background:#050507; }
+    .hero-media img,.hero-media video { width:100%; height:100%; object-fit:cover; opacity:0.45;
+      transform:scale(1.08); transition:transform 12s var(--ease); }
+    .hero-media.loaded img,.hero-media.loaded video { transform:scale(1); }
+    .hero-fallback { position:absolute; inset:0;
+      background: radial-gradient(ellipse 70% 60% at 25% 35%, rgba(212,175,55,0.18), transparent 60%),
+                  radial-gradient(ellipse 60% 50% at 75% 65%, rgba(90,90,180,0.22), transparent 60%),
+                  conic-gradient(from 180deg at 50% 50%, #0d0d12, #16161f, #0d0d12); }
+    .hero-fallback::after { content:''; position:absolute; inset:0;
+      background-image: linear-gradient(rgba(212,175,55,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(212,175,55,0.03) 1px, transparent 1px);
+      background-size:60px 60px;
+      -webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 70%);
+      mask-image:radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 70%); }
+    .hero-overlay { position:absolute; inset:0; z-index:-1;
+      background: linear-gradient(to bottom, rgba(8,8,10,0.35) 0%, rgba(8,8,10,0.55) 40%, rgba(8,8,10,0.98) 100%),
+                  radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(8,8,10,0.5) 100%); }
+    .hero-content { position:relative; text-align:center; max-width:940px; margin-inline:auto; padding-inline:24px; z-index:2; }
+
+    .hero-logo { display:flex; justify-content:center; margin-bottom:24px; animation:logoFadeIn 1s var(--ease); }
+    .hero-logo img {
+      width:clamp(140px, 22vw, 200px);
+      height:auto;
+      display:block;
+      filter:drop-shadow(0 12px 40px rgba(212,175,55,0.4));
+      border-radius:20px;
+    }
+    @keyframes logoFadeIn {
+      from { opacity:0; transform:translateY(-14px) scale(0.96); }
+      to { opacity:1; transform:translateY(0) scale(1); }
+    }
+
+    .hero-title { font-size:clamp(2.75rem,9vw,6.5rem); font-weight:800; letter-spacing:-0.045em; line-height:0.98;
+      margin-bottom:28px; background:linear-gradient(180deg,#ffffff 0%,#c8c8d0 60%,#8888a0 100%);
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .hero-title .accent { display:block;
+      background:linear-gradient(135deg,var(--gold-light) 0%,var(--gold) 50%,var(--gold-dark) 100%);
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .hero-sub { font-size:clamp(0.95rem,1.8vw,1.15rem); color:var(--text-2); max-width:620px; margin:0 auto 40px; line-height:1.7; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+    .hero-actions .btn { min-width:160px; }
+    .hero-scroll { position:absolute; bottom:28px; left:50%; transform:translateX(-50%); display:flex;
+      flex-direction:column; align-items:center; gap:10px; color:var(--text-4); font-size:0.65rem;
+      letter-spacing:0.2em; text-transform:uppercase; z-index:3; }
+    .hero-scroll-line { width:1px; height:42px; background:linear-gradient(to bottom,var(--gold),transparent);
+      animation:scrollLine 2.4s ease-in-out infinite; transform-origin:top; }
+    @keyframes scrollLine { 0%,100% { transform:scaleY(0.4); opacity:0.4; } 50% { transform:scaleY(1); opacity:1; } }
+
+    .about-grid { display:grid; gap:48px; align-items:center; }
+    @media (min-width:960px) { .about-grid { grid-template-columns:1.05fr 1fr; gap:72px; } }
+    .about-visual { position:relative; aspect-ratio:4/3; border-radius:var(--radius-xl); overflow:hidden;
+      border:1px solid var(--glass-border); background:var(--bg-elevated); box-shadow:var(--shadow-lg); }
+    .about-visual img { width:100%; height:100%; object-fit:cover; transition:transform 1.2s var(--ease); }
+    .about-visual:hover img { transform:scale(1.05); }
+    .about-placeholder { width:100%; height:100%; display:grid; place-items:center;
+      background: radial-gradient(ellipse at 30% 30%, rgba(212,175,55,0.14), transparent 60%),
+                  linear-gradient(135deg, #16161f, #0d0d12);
+      color:var(--text-4); font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; }
+    .about-list { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:32px; }
+    .about-item { display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:var(--radius-md);
+      background:var(--glass); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+      border:1px solid var(--glass-border); transition:all 0.3s var(--ease); font-size:0.88rem; font-weight:500; }
+    .about-item:hover { border-color:rgba(212,175,55,0.25); transform:translateY(-2px); }
+    .about-item-dot { width:8px; height:8px; border-radius:50%; background:var(--gold); flex-shrink:0; box-shadow:0 0 12px var(--gold-glow); }
+
+    .legendary-photo {
+      max-width:960px; margin:0 auto 40px;
+      border-radius:var(--radius-xl); overflow:hidden;
+      border:1px solid var(--glass-border);
+      background:var(--bg-elevated);
+      box-shadow:var(--shadow-lg);
+      aspect-ratio:16/9;
+    }
+    .legendary-photo img { width:100%; height:100%; object-fit:cover; }
+
+    /* ============================================================
+       MOVEMENT OF MOTION — one-photo-at-a-time carousel
+       ------------------------------------------------------------
+       • Exactly ONE complete photo visible at a time
+       • Auto-advances to the next complete photo every 4.5s
+       • Arrow buttons jump between complete photos
+       • No half-photo bleed-through, no blank space
+       • Photos come from HTML <img> tags — no Firebase
+       ============================================================ */
+    .mom-stage {
+      position:relative;
+      border-radius:var(--radius-xl);
+      overflow:hidden;
+      background:var(--bg-elevated);
+      border:1px solid var(--glass-border);
+      box-shadow:var(--shadow-lg);
+      aspect-ratio:16/10;
+    }
+    @media (max-width:640px) { .mom-stage { aspect-ratio:4/5; } }
+
+    /* The rail is a flex row of full-width slides.
+       translate by -100% per slide → exactly one photo shows. */
+    .mom-rail {
+      display:flex;
+      height:100%;
+      width:100%;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    /* Each slide takes exactly the full width of the stage */
+    .mom-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+
+    .mom-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+      transition: transform 0.8s var(--ease);
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .mom-slide:hover img { transform: scale(1.03); }
+
+    .mom-slide-empty {
+      width:100%; height:100%;
+      display:grid; place-items:center;
+      background:linear-gradient(135deg,#16161f,#0a0a0e);
+      color:var(--text-4);
+      font-size:0.75rem;
+      letter-spacing:0.15em;
+      text-transform:uppercase;
+      text-align:center;
+      padding:16px;
+    }
+
+    .mom-nav {
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:48px; height:48px;
+      border-radius:50%;
+      background:rgba(8,8,10,0.65);
+      -webkit-backdrop-filter:blur(12px);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.15);
+      color:white;
+      display:grid;
+      place-items:center;
+      z-index:10;
+      transition:all 0.3s var(--ease);
+      opacity:0;
+      font-size:1.4rem;
+      line-height:1;
+      padding-bottom:4px;
+    }
+    .mom-stage:hover .mom-nav { opacity:1; }
+    .mom-nav:hover { background:var(--gold); color:#0a0a0c; border-color:var(--gold); }
+    .mom-nav.prev { left:16px; }
+    .mom-nav.next { right:16px; }
+    @media (max-width:640px) { .mom-nav { opacity:1; width:42px; height:42px; } }
+
+    .services-grid { display:grid; gap:18px; grid-template-columns:1fr; }
+    @media (min-width:600px) { .services-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (min-width:1024px) { .services-grid { grid-template-columns:repeat(3,1fr); } }
+    .service-card { padding:32px 28px; border-radius:var(--radius-lg); background:var(--glass);
+      -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border:1px solid var(--glass-border);
+      transition:all 0.45s var(--ease); position:relative; overflow:hidden; }
+    .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:0; transition:opacity 0.45s var(--ease); }
+    .service-card:hover { border-color:rgba(212,175,55,0.25); transform:translateY(-6px);
+      box-shadow:0 24px 48px -20px rgba(212,175,55,0.18); }
+    .service-card:hover::before { opacity:1; }
+    .service-icon { width:52px; height:52px; border-radius:14px;
+      background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.05));
+      border:1px solid rgba(212,175,55,0.18); display:grid; place-items:center; font-size:1.4rem;
+      margin-bottom:22px; transition:transform 0.45s var(--ease); }
+    .service-card:hover .service-icon { transform:scale(1.08) rotate(-4deg); }
+    .service-title { font-size:1.12rem; font-weight:600; letter-spacing:-0.02em; margin-bottom:10px; }
+    .service-text { font-size:0.88rem; color:var(--text-2); line-height:1.65; }
+
+    .booking-layout { display:grid; gap:32px; }
+    @media (min-width:960px) { .booking-layout { grid-template-columns:1.15fr 1fr; gap:48px; align-items:start; } }
+
+    .calendar-panel {
+      padding:32px 28px;
+      border-radius:var(--radius-xl);
+      background: linear-gradient(160deg, rgba(24,24,32,0.9) 0%, rgba(16,16,22,0.85) 100%);
+      -webkit-backdrop-filter:blur(24px) saturate(140%);
+      backdrop-filter:blur(24px) saturate(140%);
+      border:1px solid rgba(212,175,55,0.12);
+      box-shadow: 0 24px 60px -20px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    @media (max-width:480px) { .calendar-panel { padding:20px; } }
+    .calendar-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; gap:12px; }
+    .calendar-label {
+      font-size:1.15rem; font-weight:700; letter-spacing:-0.02em;
+      background:linear-gradient(135deg, #ffffff, #d4af37);
+      -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    }
+    .calendar-btns { display:flex; gap:6px; }
+    .cal-btn { width:38px; height:38px; border-radius:10px; background:rgba(212,175,55,0.08);
+      border:1px solid rgba(212,175,55,0.18); color:var(--gold); display:grid; place-items:center;
+      transition:all 0.25s var(--ease); font-size:1.1rem; line-height:1; padding-bottom:3px; }
+    .cal-btn:hover { background:rgba(212,175,55,0.2); color:#ffffff; border-color:var(--gold); transform:scale(1.06); }
+    .calendar-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:5px; }
+    .cal-dow { text-align:center; font-size:0.65rem; font-weight:700; letter-spacing:0.12em;
+      text-transform:uppercase; color:var(--text-3); padding:10px 0 8px; }
+    .cal-day { aspect-ratio:1; display:grid; place-items:center; border-radius:10px; font-size:0.82rem;
+      font-weight:500; color:var(--text-2); border:1px solid transparent; transition:all 0.22s var(--ease);
+      position:relative; cursor:default; min-height:38px; }
+    .cal-day.other { color:var(--text-4); opacity:0.25; }
+    .cal-day.today {
+      border-color:var(--gold); font-weight:800; color:var(--gold);
+      box-shadow: 0 0 0 1px var(--gold), 0 0 20px -4px var(--gold-glow);
+    }
+    .cal-day.available {
+      background: linear-gradient(135deg, rgba(52,211,153,0.14), rgba(52,211,153,0.06));
+      color:var(--green); border-color:rgba(52,211,153,0.25); cursor:pointer;
+    }
+    .cal-day.available:hover {
+      background: rgba(52,211,153,0.28);
+      transform:scale(1.08);
+      box-shadow: 0 8px 20px -6px rgba(52,211,153,0.5);
+    }
+    .cal-day.booked {
+      background: linear-gradient(135deg, rgba(248,113,113,0.14), rgba(248,113,113,0.06));
+      color:var(--red); border-color:rgba(248,113,113,0.25); cursor:not-allowed;
+    }
+    .cal-day.pending {
+      background: linear-gradient(135deg, rgba(251,191,36,0.14), rgba(251,191,36,0.06));
+      color:var(--amber); border-color:rgba(251,191,36,0.25); cursor:not-allowed;
+    }
+    .cal-legend { display:flex; flex-wrap:wrap; gap:18px; margin-top:22px; padding-top:18px;
+      border-top:1px solid rgba(255,255,255,0.06); }
+    .legend-item { display:flex; align-items:center; gap:8px; font-size:0.78rem; color:var(--text-2); }
+    .legend-swatch { width:10px; height:10px; border-radius:50%; }
+    .swatch-available { background:var(--green); box-shadow:0 0 8px var(--green); }
+    .swatch-booked { background:var(--red); box-shadow:0 0 8px var(--red); }
+    .swatch-pending { background:var(--amber); box-shadow:0 0 8px var(--amber); }
+
+    .checker-panel { padding:32px 28px; border-radius:var(--radius-lg); background:var(--glass);
+      -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border:1px solid var(--glass-border); }
+    .checker-title { font-size:1.25rem; font-weight:600; letter-spacing:-0.02em; margin-bottom:6px; }
+    .checker-sub { font-size:0.88rem; color:var(--text-2); margin-bottom:24px; line-height:1.6; }
+
+    .field { margin-bottom:18px; }
+    .field-label { display:block; font-size:0.78rem; font-weight:500; color:var(--text-2);
+      margin-bottom:8px; letter-spacing:0.02em; }
+    .field-label .req { color:var(--gold); margin-left:3px; }
+    .input,.select,.textarea { width:100%; padding:14px 16px; min-height:52px; border-radius:12px;
+      background:rgba(255,255,255,0.035); border:1px solid rgba(255,255,255,0.09); color:var(--text);
+      font-size:0.9rem; transition:all 0.3s var(--ease); outline:none;
+      -webkit-appearance:none; appearance:none; }
+    .input::placeholder,.textarea::placeholder { color:var(--text-4); }
+    .input:hover,.select:hover,.textarea:hover { border-color:rgba(255,255,255,0.15); }
+    .input:focus,.select:focus,.textarea:focus { border-color:var(--gold); background:rgba(212,175,55,0.04);
+      box-shadow:0 0 0 3px rgba(212,175,55,0.1); }
+    .select { background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23a4a4ae' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 16px center; padding-right:42px; }
+    .textarea { resize:vertical; min-height:110px; line-height:1.6; }
+    .field-row { display:grid; gap:18px; }
+    @media (min-width:600px) { .field-row.two { grid-template-columns:1fr 1fr; } }
+
+    .avail-result { margin-top:20px; padding:18px 20px; border-radius:14px; font-size:0.88rem;
+      line-height:1.55; display:none; animation:slideUp 0.4s var(--ease); }
+    .avail-result.show { display:block; }
+    .avail-result.available { background:var(--green-bg); border:1px solid rgba(52,211,153,0.25); color:var(--green); }
+    .avail-result.booked { background:var(--red-bg); border:1px solid rgba(248,113,113,0.25); color:var(--red); }
+    .avail-result.pending { background:var(--amber-bg); border:1px solid rgba(251,191,36,0.25); color:var(--amber); }
+    .avail-result-title { font-weight:600; margin-bottom:4px; display:flex; align-items:center; gap:8px; }
+    .avail-result-detail { opacity:0.85; font-size:0.82rem; }
+    @keyframes slideUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+    .form-shell { max-width:720px; margin-inline:auto; padding:40px 32px; border-radius:var(--radius-xl);
+      background:var(--glass); -webkit-backdrop-filter:blur(24px); backdrop-filter:blur(24px);
+      border:1px solid var(--glass-border); box-shadow:var(--shadow-lg); }
+    @media (max-width:600px) { .form-shell { padding:28px 20px; } }
+    .form-success { display:none; text-align:center; padding:32px 8px; }
+    .form-success.show { display:block; animation:slideUp 0.5s var(--ease); }
+    .success-ring { width:80px; height:80px; border-radius:50%;
+      background:radial-gradient(circle,rgba(52,211,153,0.2),rgba(52,211,153,0.05));
+      border:1px solid rgba(52,211,153,0.3); display:grid; place-items:center; margin:0 auto 24px;
+      font-size:2rem; color:var(--green); animation:successPop 0.6s var(--ease); }
+    @keyframes successPop { 0% { transform:scale(0.5); opacity:0; } 60% { transform:scale(1.1); } 100% { transform:scale(1); opacity:1; } }
+    .success-title { font-size:1.4rem; font-weight:600; letter-spacing:-0.02em; margin-bottom:10px; }
+    .success-text { font-size:0.9rem; color:var(--text-2); margin-bottom:22px; line-height:1.6; }
+    .success-code { display:inline-block; padding:12px 24px; border-radius:12px;
+      background:rgba(212,175,55,0.1); border:1px solid rgba(212,175,55,0.28); color:var(--gold);
+      font-weight:700; font-size:1rem; letter-spacing:0.08em; font-family:'SF Mono',Monaco,monospace; margin-bottom:28px; }
+
+    .contact-layout { display:grid; gap:32px; }
+    @media (min-width:960px) { .contact-layout { grid-template-columns:1fr 1fr; gap:48px; } }
+    .contact-stack { display:flex; flex-direction:column; gap:14px; }
+    .contact-tile { display:flex; align-items:flex-start; gap:16px; padding:22px; border-radius:var(--radius-md);
+      background:var(--glass); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+      border:1px solid var(--glass-border); transition:all 0.35s var(--ease); }
+    .contact-tile:hover { border-color:rgba(212,175,55,0.25); transform:translateX(4px); }
+    .contact-icon { width:46px; height:46px; border-radius:13px;
+      background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.04));
+      border:1px solid rgba(212,175,55,0.18); display:grid; place-items:center; font-size:1.2rem; flex-shrink:0; }
+    .contact-label { font-size:0.7rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase;
+      color:var(--text-4); margin-bottom:5px; }
+    .contact-value { font-size:0.95rem; font-weight:500; color:var(--text); word-break:break-word; line-height:1.5; }
+    .contact-value a { transition:color 0.3s ease; } .contact-value a:hover { color:var(--gold); }
+    .contact-actions { display:flex; flex-direction:column; gap:12px; }
+    .contact-action { display:flex; align-items:center; gap:14px; padding:18px 22px; border-radius:var(--radius-md);
+      background:var(--glass); -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+      border:1px solid var(--glass-border); transition:all 0.35s var(--ease); }
+    .contact-action:hover { border-color:rgba(212,175,55,0.35); transform:translateY(-3px);
+      box-shadow:0 16px 32px -16px var(--gold-glow); }
+    .contact-action-icon { width:44px; height:44px; border-radius:12px;
+      background:linear-gradient(135deg,rgba(212,175,55,0.15),rgba(212,175,55,0.04));
+      border:1px solid rgba(212,175,55,0.18); display:grid; place-items:center; font-size:1.2rem; flex-shrink:0; }
+    .contact-action-text strong { display:block; font-size:0.92rem; font-weight:600; margin-bottom:2px; }
+    .contact-action-text small { font-size:0.78rem; color:var(--text-3); }
+
+    .footer { padding:64px 0 36px; border-top:1px solid var(--glass-border); margin-top:40px; position:relative; z-index:2; }
+    .footer-grid { display:grid; gap:40px; margin-bottom:48px; }
+    @media (min-width:720px) { .footer-grid { grid-template-columns:2fr 1fr 1fr; } }
+    .footer-brand { font-size:1.15rem; font-weight:700; letter-spacing:-0.02em; margin-bottom:12px; }
+    .footer-desc { font-size:0.88rem; color:var(--text-2); max-width:340px; line-height:1.65; }
+    .footer-heading { font-size:0.72rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+      color:var(--text-4); margin-bottom:18px; }
+    .footer-list { display:flex; flex-direction:column; gap:11px; }
+    .footer-list a { font-size:0.88rem; color:var(--text-2); transition:color 0.3s ease; width:fit-content; }
+    .footer-list a:hover { color:var(--gold); }
+    .footer-base { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+      gap:14px; padding-top:32px; border-top:1px solid var(--glass-border); font-size:0.78rem; color:var(--text-4); }
+
+    .lightbox { position:fixed; inset:0; z-index:2000; background:rgba(4,4,6,0.97);
+      -webkit-backdrop-filter:blur(24px); backdrop-filter:blur(24px); display:flex; align-items:center;
+      justify-content:center; padding:72px 20px 88px; opacity:0; visibility:hidden;
+      transition:opacity 0.35s var(--ease),visibility 0.35s; }
+    .lightbox.open { opacity:1; visibility:visible; }
+    .lightbox-img { max-width:100%; max-height:100%; object-fit:contain; border-radius:12px;
+      box-shadow:0 40px 80px -20px rgba(0,0,0,0.9); animation:lightboxIn 0.4s var(--ease); }
+    @keyframes lightboxIn { from { opacity:0; transform:scale(0.94); } to { opacity:1; transform:scale(1); } }
+    .lightbox-close { position:absolute; top:20px; right:20px; width:48px; height:48px; border-radius:50%;
+      background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:white;
+      font-size:1.5rem; display:grid; place-items:center; transition:all 0.3s var(--ease);
+      line-height:1; padding-bottom:3px; z-index:10; }
+    .lightbox-close:hover { background:rgba(255,255,255,0.18); transform:rotate(90deg); }
+    .lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); width:56px; height:56px;
+      border-radius:50%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12);
+      color:white; display:grid; place-items:center; font-size:1.6rem; line-height:1; padding-bottom:4px;
+      transition:all 0.3s var(--ease); z-index:10; }
+    .lightbox-nav:hover { background:var(--gold); color:#0a0a0c; border-color:var(--gold); }
+    .lightbox-nav.prev { left:20px; } .lightbox-nav.next { right:20px; }
+    .lightbox-info { position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
+      text-align:center; max-width:90vw; padding:0 20px; }
+    .lightbox-info .cat { font-size:0.68rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase;
+      color:var(--gold); margin-bottom:6px; }
+    .lightbox-info .name { font-size:1.05rem; font-weight:600; letter-spacing:-0.01em; }
+    @media (max-width:600px) { .lightbox-nav { width:46px; height:46px; font-size:1.3rem; }
+      .lightbox-nav.prev { left:10px; } .lightbox-nav.next { right:10px; } }
+
+    .toast { position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(120%); z-index:3000;
+      padding:14px 24px; border-radius:var(--radius-pill); background:rgba(18,18,24,0.96);
+      -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px); border:1px solid var(--glass-border);
+      box-shadow:var(--shadow-lg); font-size:0.88rem; font-weight:500; max-width:min(92vw,480px);
+      text-align:center; transition:transform 0.5s var(--ease); pointer-events:none; }
+    .toast.show { transform:translateX(-50%) translateY(0); }
+    .toast.success { border-color:rgba(52,211,153,0.3); } .toast.error { border-color:rgba(248,113,113,0.3); }
+    .toast.info { border-color:rgba(212,175,55,0.3); }
+
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.9s var(--ease),transform 0.9s var(--ease); }
+    .reveal.in { opacity:1; transform:translateY(0); }
+    .d1 { transition-delay:0.08s; } .d2 { transition-delay:0.16s; } .d3 { transition-delay:0.24s; }
+    .d4 { transition-delay:0.32s; } .d5 { transition-delay:0.4s; }
+
+    .spinner { width:18px; height:18px; border:2px solid rgba(255,255,255,0.2); border-top-color:currentColor;
+      border-radius:50%; animation:spin 0.7s linear infinite; display:inline-block; flex-shrink:0; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .hidden { display:none !important; }
+
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+      .reveal { opacity:1; transform:none; }
+      .mom-rail { transition:none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PERMANENT WEBSITE IMAGES (logo / about / legendary)
+       ============================================================ -->
+  <script>
+    window.WEBSITE_IMAGES = {
+      ngbLogo:        "ngb.png",
+      aboutUs:        "n1.png",
+      legendaryPhoto: ".png"
+    };
+  </script>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand" data-scroll>
+        <span class="nav-mark">NGB</span>
+        <span class="nav-brand-text">New Golden<small>Brass Band</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about"    class="nav-link" data-scroll data-i18n="nav_about">About</a>
+        <a href="#movement" class="nav-link" data-scroll data-i18n="nav_gallery">Gallery</a>
+        <a href="#services" class="nav-link" data-scroll data-i18n="nav_services">Services</a>
+        <a href="#booking"  class="nav-link" data-scroll data-i18n="nav_booking">Booking</a>
+        <a href="#contact"  class="nav-link" data-scroll data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#check-date" class="btn btn-primary" data-scroll data-i18n="nav_check_booking">Check Booking</a>
+
+        <div class="lang-switch lang-switch-nav" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="mr">मराठी</button>
+          <button type="button" class="lang-btn" data-lang="en">English</button>
+        </div>
+      </div>
+
+      <div class="lang-switch nav-lang-mobile" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="mr">मराठी</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+    <a href="#about"    class="drawer-link" data-scroll data-i18n="nav_about">About</a>
+    <a href="#movement" class="drawer-link" data-scroll data-i18n="nav_gallery">Gallery</a>
+    <a href="#services" class="drawer-link" data-scroll data-i18n="nav_services">Services</a>
+    <a href="#booking"  class="drawer-link" data-scroll data-i18n="nav_booking">Booking</a>
+    <a href="#contact"  class="drawer-link" data-scroll data-i18n="nav_contact">Contact</a>
+    <a href="#check-date" class="btn btn-primary drawer-cta" data-scroll data-i18n="nav_check_booking">Check Booking</a>
+
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn" data-lang="mr">मराठी</button>
+      <button type="button" class="lang-btn" data-lang="en">English</button>
+    </div>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-media" id="heroMedia"><div class="hero-fallback"></div></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-logo reveal">
+        <img id="heroNgbLogo" src="" alt="New Golden Brass Band" />
+      </div>
+      <h1 class="hero-title reveal d1">
+        <span data-i18n="hero_title_1">The Sound</span><br>
+        <span class="accent" data-i18n="hero_title_2">of Celebration</span>
+      </h1>
+      <p class="hero-sub reveal d2" data-i18n="hero_sub">New Golden Brass Band — creating unforgettable musical experiences for weddings, processions, cultural celebrations and special events across Maharashtra.</p>
+      <div class="hero-actions reveal d3">
+        <a href="#check-date" class="btn btn-primary" data-scroll data-i18n="hero_btn_check">Check Booking</a>
+        <a href="#contact"    class="btn btn-secondary" data-scroll data-i18n="hero_btn_contact">Contact Us</a>
+        <a href="#movement"   class="btn btn-secondary" data-scroll data-i18n="hero_btn_gallery">View Gallery</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true"><span data-i18n="scroll">Scroll</span><div class="hero-scroll-line"></div></div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="legendary-photo reveal">
+        <img id="legendaryPhoto" src="" alt="New Golden Brass Band"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'about-placeholder',textContent:'New Golden Brass Band',style:'width:100%;height:100%;'}))" />
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual reveal" id="aboutVisual">
+          <img id="aboutUsPhoto" src="n1.png" alt="New Golden Brass Band" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'about-placeholder',textContent:'New Golden Brass Band'}))" />
+        </div>
+        <div>
+          <div class="eyebrow reveal" data-i18n="about_eyebrow">About Us</div>
+          <h2 class="section-title reveal d1">
+            <span data-i18n="about_title_1">The Legendary of</span><br>
+            <span data-i18n="about_title_2">Musical Exhilaration</span>
+          </h2>
+          <p class="section-lead reveal d2" id="aboutText" data-i18n="about_text">New Golden Brass Band has been the heartbeat of celebrations across Deola and beyond. Our ensemble blends traditional brass mastery with contemporary energy, creating moments that resonate long after the last note fades.</p>
+          <div class="about-list reveal d3">
+            <div class="about-item"><span class="about-item-dot"></span><span data-i18n="about_svc_weddings">Weddings</span></div>
+            <div class="about-item"><span class="about-item-dot"></span><span data-i18n="about_svc_processions">Marriage Processions</span></div>
+            <div class="about-item"><span class="about-item-dot"></span><span data-i18n="about_svc_religious">Religious Events</span></div>
+            <div class="about-item"><span class="about-item-dot"></span><span data-i18n="about_svc_cultural">Cultural Events</span></div>
+            <div class="about-item"><span class="about-item-dot"></span><span data-i18n="about_svc_special">Special Celebrations</span></div>
+            <div class="about-item"><span class="about-item-dot"></span><span data-i18n="about_svc_other">Other Events</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ============================================================
+          MOVEMENT OF MOTION PHOTOS - ADD PHOTOS HERE
+       ============================================================
+       ============================================================
+       HOW TO ADD A PHOTO:
+         1. Put your image file inside the  images/  folder
+            (example: images/movement-07.png)
+         2. Copy one of the <img> lines below and change the src.
+         3. Save the file — the photo automatically joins the
+            existing single-photo carousel.
+
+       ► NO fixed limit — add as many <img> lines as you want.
+       ► Exactly ONE full photo shows at a time.
+       ► Photos auto-advance every 4.5 seconds.
+       ► Click an arrow to jump to the next/previous photo.
+       ► Click a photo to open the lightbox.
+
+       NOTE: Firebase is NOT used for any photos.
+             Photos come ONLY from the <img> tags below.
+       ============================================================ -->
+  <section class="section" id="movement">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:40px;">
+        <div class="eyebrow reveal" data-i18n="mom_eyebrow">Movement of Motion</div>
+        <h2 class="section-title reveal d1" data-i18n="mom_title">Moments in Motion</h2>
+        <p class="section-lead reveal d2" data-i18n="mom_lead">Every performance tells a story. Watch it unfold.</p>
+      </div>
+
+      <div class="mom-stage reveal" id="momStage">
+        <div class="mom-rail" id="momRail">
+          <!-- ⬇⬇⬇  MOVEMENT OF MOTION PHOTOS - ADD PHOTOS HERE  ⬇⬇⬇ -->
+          <img src="n1.png" alt="Movement of Motion">
+          <img src="logo.png" alt="Movement of Motion">
+          <img src="logo2.png" alt="Movement of Motion">
+          <img src="images/movement-04.png" alt="Movement of Motion">
+          <img src="images/movement-05.png" alt="Movement of Motion">
+          <img src="images/movement-06.png" alt="Movement of Motion">
+          <!-- To add more, copy any <img> line above and change the filename.
+               Example:
+               <img src="images/movement-07.png" alt="Movement of Motion">
+               <img src="images/movement-08.png" alt="Movement of Motion">
+               ... and so on, no limit. -->
+          <!-- ⬆⬆⬆  MOVEMENT OF MOTION PHOTOS - ADD PHOTOS HERE  ⬆⬆⬆ -->
+        </div>
+
+        <button class="mom-nav prev" id="momPrev" aria-label="Previous image">‹</button>
+        <button class="mom-nav next" id="momNext" aria-label="Next image">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:56px;">
+        <div class="eyebrow reveal" data-i18n="services_eyebrow">What We Offer</div>
+        <h2 class="section-title reveal d1" data-i18n="services_title">Our Services</h2>
+        <p class="section-lead reveal d2" data-i18n="services_lead">From grand wedding processions to intimate cultural gatherings, we bring the perfect musical backdrop to every occasion.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card reveal"><div class="service-icon">♛</div><h3 class="service-title" data-i18n="svc1_title">Wedding Band</h3><p class="service-text" data-i18n="svc1_text">Elegant brass performances tailored for your special day, from the baraat to the reception.</p></article>
+        <article class="service-card reveal d1"><div class="service-icon">♪</div><h3 class="service-title" data-i18n="svc2_title">Marriage Procession</h3><p class="service-text" data-i18n="svc2_text">High-energy processional music that keeps the celebration alive and moving.</p></article>
+        <article class="service-card reveal d2"><div class="service-icon">✧</div><h3 class="service-title" data-i18n="svc3_title">Religious Programs</h3><p class="service-text" data-i18n="svc3_text">Devotional and traditional brass arrangements for spiritual ceremonies and festivals.</p></article>
+        <article class="service-card reveal d3"><div class="service-icon">◆</div><h3 class="service-title" data-i18n="svc4_title">Cultural Programs</h3><p class="service-text" data-i18n="svc4_text">Authentic musical accompaniment for cultural events, fairs, and community gatherings.</p></article>
+        <article class="service-card reveal d4"><div class="service-icon">✦</div><h3 class="service-title" data-i18n="svc5_title">Special Events</h3><p class="service-text" data-i18n="svc5_text">Customized performances for corporate events, inaugurations, and private celebrations.</p></article>
+        <article class="service-card reveal d5"><div class="service-icon">★</div><h3 class="service-title" data-i18n="svc6_title">Custom Event Booking</h3><p class="service-text" data-i18n="svc6_text">Have something unique in mind? We'll craft a bespoke musical experience just for you.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:52px;">
+        <div class="eyebrow reveal" data-i18n="booking_eyebrow">Availability</div>
+        <h2 class="section-title reveal d1" data-i18n="booking_title">Booking Dates</h2>
+        <p class="section-lead reveal d2" data-i18n="booking_lead">Check our live availability calendar. Green dates are open — secure yours before they're gone.</p>
+      </div>
+      <div class="booking-layout">
+        <div class="calendar-panel reveal">
+          <div class="calendar-top">
+            <div class="calendar-label" id="calLabel">Month Year</div>
+            <div class="calendar-btns">
+              <button class="cal-btn" id="calPrev" aria-label="Previous month">‹</button>
+              <button class="cal-btn" id="calNext" aria-label="Next month">›</button>
+            </div>
+          </div>
+          <div class="calendar-grid" id="calGrid"></div>
+          <div class="cal-legend">
+            <div class="legend-item"><span class="legend-swatch swatch-available"></span><span data-i18n="legend_available">Available</span></div>
+            <div class="legend-item"><span class="legend-swatch swatch-booked"></span><span data-i18n="legend_booked">Booked</span></div>
+            <div class="legend-item"><span class="legend-swatch swatch-pending"></span><span data-i18n="legend_pending">Pending</span></div>
+          </div>
+        </div>
+        <div class="checker-panel reveal d1" id="check-date">
+          <h3 class="checker-title" data-i18n="checker_title">Check Your Date</h3>
+          <p class="checker-sub" data-i18n="checker_sub">Select your event details to see real-time availability.</p>
+          <div class="field"><label class="field-label" for="chkDate"><span data-i18n="field_event_date">Event Date</span> <span class="req">*</span></label><input type="date" class="input" id="chkDate" /></div>
+          <div class="field"><label class="field-label" for="chkLocation" data-i18n="field_event_location">Event Location</label><input type="text" class="input" id="chkLocation" placeholder="City / Village" /></div>
+          <div class="field"><label class="field-label" for="chkType" data-i18n="field_event_type">Event Type</label>
+            <select class="select" id="chkType">
+              <option value="" data-i18n="select_event_type">Select event type</option>
+              <option data-i18n="evt_wedding">Wedding</option>
+              <option data-i18n="evt_procession">Marriage Procession</option>
+              <option data-i18n="evt_religious">Religious Program</option>
+              <option data-i18n="evt_cultural">Cultural Event</option>
+              <option data-i18n="evt_special">Special Celebration</option>
+              <option data-i18n="evt_other">Other</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-block" id="chkBtn" data-i18n="checker_btn">Check Availability</button>
+          <div class="avail-result" id="availResult">
+            <div class="avail-result-title" id="availTitle"></div>
+            <div class="avail-result-detail" id="availDetail"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:40px;">
+        <button class="btn btn-primary" id="openOrdersBtn" type="button" style="min-width:220px;" data-i18n="orders_btn">
+          📋 Orders Dates
+        </button>
+      </div>
+
+      <div id="ordersPanel" style="
+        max-width:960px;margin:28px auto 0;
+        padding:24px;
+        border-radius:var(--radius-lg);
+        background:var(--glass);
+        -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+        border:1px solid var(--glass-border);
+        display:none;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px;">
+          <h3 style="font-size:1.15rem;font-weight:600;letter-spacing:-0.02em;" data-i18n="orders_title">
+            Orders &amp; Event Schedule
+          </h3>
+          <button class="btn btn-secondary btn-sm" id="closeOrdersBtn" type="button" data-i18n="orders_close">Close</button>
+        </div>
+        <div id="ordersList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booking-form">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:44px;">
+        <div class="eyebrow reveal" data-i18n="form_eyebrow">Get in Touch</div>
+        <h2 class="section-title reveal d1" data-i18n="form_title">Request Booking</h2>
+        <p class="section-lead reveal d2" data-i18n="form_lead">Fill out the form below and we'll get back to you within 24 hours.</p>
+      </div>
+      <div class="form-shell reveal d3">
+        <form id="bookingForm" novalidate>
+          <div class="field-row two">
+            <div class="field"><label class="field-label" for="fName"><span data-i18n="form_full_name">Full Name</span> <span class="req">*</span></label><input type="text" class="input" id="fName" required /></div>
+            <div class="field"><label class="field-label" for="fMobile"><span data-i18n="form_mobile">Mobile Number</span> <span class="req">*</span></label><input type="tel" class="input" id="fMobile" required placeholder="+91 98765 43210" /></div>
+          </div>
+          <div class="field-row two">
+            <div class="field"><label class="field-label" for="fWhatsapp" data-i18n="form_whatsapp">WhatsApp Number</label><input type="tel" class="input" id="fWhatsapp" /></div>
+            <div class="field"><label class="field-label" for="fDate"><span data-i18n="form_event_date">Event Date</span> <span class="req">*</span></label><input type="date" class="input" id="fDate" required /></div>
+          </div>
+          <div class="field-row two">
+            <div class="field"><label class="field-label" for="fType"><span data-i18n="form_event_type">Event Type</span> <span class="req">*</span></label>
+              <select class="select" id="fType" required>
+                <option value="" data-i18n="select_event_type">Select event type</option>
+                <option data-i18n="evt_wedding">Wedding</option>
+                <option data-i18n="evt_procession">Marriage Procession</option>
+                <option data-i18n="evt_religious">Religious Program</option>
+                <option data-i18n="evt_cultural">Cultural Event</option>
+                <option data-i18n="evt_special">Special Celebration</option>
+                <option data-i18n="evt_other">Other</option>
+              </select>
+            </div>
+            <div class="field"><label class="field-label" for="fTime" data-i18n="form_event_time">Approximate Event Time</label><input type="time" class="input" id="fTime" /></div>
+          </div>
+          <div class="field-row two">
+            <div class="field"><label class="field-label" for="fLocation"><span data-i18n="form_location">Event Location</span> <span class="req">*</span></label><input type="text" class="input" id="fLocation" required /></div>
+            <div class="field"><label class="field-label" for="fCity"><span data-i18n="form_city">City / Village</span> <span class="req">*</span></label><input type="text" class="input" id="fCity" required /></div>
+          </div>
+          <div class="field"><label class="field-label" for="fMessage" data-i18n="form_message">Additional Message</label><textarea class="textarea" id="fMessage"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn" style="margin-top:8px;" data-i18n="form_submit">Send Booking Request</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="success-ring">✓</div>
+          <h3 class="success-title" data-i18n="form_success_title">Your booking request has been received.</h3>
+          <p class="success-text" data-i18n="form_success_text">We'll review your request and get back to you shortly. Save your request ID:</p>
+          <div class="success-code" id="successCode">NGB-XXXXXX</div>
+          <br>
+          <button class="btn btn-secondary" id="resetForm" data-i18n="form_reset">Submit Another Request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:48px;">
+        <div class="eyebrow reveal" data-i18n="contact_eyebrow">Reach Out</div>
+        <h2 class="section-title reveal d1" data-i18n="contact_title">Contact Us</h2>
+        <p class="section-lead reveal d2" data-i18n="contact_lead">We'd love to be part of your celebration. Get in touch with us today.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-stack reveal">
+          <div class="contact-tile"><div class="contact-icon">📞</div><div><div class="contact-label" data-i18n="contact_phone">Phone</div><div class="contact-value" id="cPhone"><a href="tel:+919876543210">+91 98765 43210</a></div></div></div>
+          <div class="contact-tile"><div class="contact-icon">💬</div><div><div class="contact-label" data-i18n="contact_whatsapp">WhatsApp</div><div class="contact-value" id="cWhatsapp"><a href="https://wa.me/919876543210" target="_blank" rel="noopener">+91 98765 43210</a></div></div></div>
+          <div class="contact-tile"><div class="contact-icon">📍</div><div><div class="contact-label" data-i18n="contact_location">Location</div><div class="contact-value" id="cAddress">Tal:Deola, Dis:Nashik, Maharashtra, India</div></div></div>
+        </div>
+        <div class="contact-actions reveal d1">
+          <a href="#" class="contact-action" id="callAction"><div class="contact-action-icon">📞</div><div class="contact-action-text"><strong data-i18n="contact_call_now">Call Now</strong><small data-i18n="contact_call_sub">Speak with us directly</small></div></a>
+          <a href="#" class="contact-action" id="whatsappAction" target="_blank" rel="noopener"><div class="contact-action-icon">💬</div><div class="contact-action-text"><strong data-i18n="contact_wa">WhatsApp</strong><small data-i18n="contact_wa_sub">Chat with us instantly</small></div></a>
+          <a href="#" class="contact-action" id="instagramAction" target="_blank" rel="noopener"><div class="contact-action-icon">📷</div><div class="contact-action-text"><strong data-i18n="contact_ig">Instagram</strong><small data-i18n="contact_ig_sub">See our latest moments</small></div></a>
+          <a href="#" class="contact-action" id="youtubeAction" target="_blank" rel="noopener"><div class="contact-action-icon">▶</div><div class="contact-action-text"><strong data-i18n="contact_yt">YouTube</strong><small data-i18n="contact_yt_sub">Watch our performances</small></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">New Golden Brass Band</div>
+          <p class="footer-desc" data-i18n="footer_desc">Deola, Maharashtra, India — bringing the sound of celebration to every occasion.</p>
+        </div>
+        <div>
+          <div class="footer-heading" data-i18n="footer_links">Quick Links</div>
+          <ul class="footer-list">
+            <li><a href="#home"     data-scroll data-i18n="nav_home">Home</a></li>
+            <li><a href="#about"    data-scroll data-i18n="nav_about">About</a></li>
+            <li><a href="#movement" data-scroll data-i18n="nav_gallery">Gallery</a></li>
+            <li><a href="#services" data-scroll data-i18n="nav_services">Services</a></li>
+            <li><a href="#booking"  data-scroll data-i18n="nav_booking">Booking</a></li>
+            <li><a href="#contact"  data-scroll data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading" data-i18n="footer_connect">Connect</div>
+          <ul class="footer-list">
+            <li><a href="#" id="fInstagram" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" id="fFacebook" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" id="fYoutube" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span id="year">2025</span> New Golden Brass Band.</span>
+        <span data-i18n="footer_location">Deola, Maharashtra, India</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lbClose" aria-label="Close viewer">×</button>
+    <button class="lightbox-nav prev" id="lbPrev" aria-label="Previous image">‹</button>
+    <button class="lightbox-nav next" id="lbNext" aria-label="Next image">›</button>
+    <img class="lightbox-img" id="lbImg" src="" alt="" />
+    <div class="lightbox-info" id="lbInfo"><div class="cat"></div><div class="name"></div></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+    import {
+      getDatabase, ref as dbRef, get, onValue, push, set
+    } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
+
+    /* ============================================================
+       FIREBASE  —  used ONLY for data/information
+       (bookings, orders, site settings)
+       NOT used for any photos.
+       ============================================================ */
+    const firebaseConfig = {
+      apiKey: "AIzaSyBc2oWeDEsINA1jRO_kzOe3SYuvPi3sTtY",
+      authDomain: "new-golden-brass-band.firebaseapp.com",
+      databaseURL: "https://new-golden-brass-band-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "new-golden-brass-band",
+      storageBucket: "new-golden-brass-band.firebasestorage.app",
+      messagingSenderId: "146384353580",
+      appId: "1:146384353580:web:d53acd06498a33520e5489",
+      measurementId: "G-8TDX95VNS8"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const rtdb = getDatabase(app);
+
+    const $ = (s, ctx = document) => ctx.querySelector(s);
+    const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
+
+    const pad = (n) => String(n).padStart(2, '0');
+    const dateKey = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    const parseKey = (k) => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d); };
+    const prettyDate = (k) => { try { return parseKey(k).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }); } catch { return k; } };
+    const escapeHtml = (s) => { if (s == null) return ''; return String(s).replace(/[&<>"']/g, (m) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); };
+
+    /* ============================================================
+       LANGUAGE  —  Marathi / English interface switching
+       ============================================================ */
+    const I18N = {
+      en: {
+        nav_home:"Home", nav_about:"About", nav_gallery:"Gallery",
+        nav_services:"Services", nav_booking:"Booking",
+        nav_contact:"Contact", nav_check_booking:"Check Booking",
+
+        hero_title_1:"The Sound", hero_title_2:"of Celebration",
+        hero_sub:"New Golden Brass Band — creating unforgettable musical experiences for weddings, processions, cultural celebrations and special events across Maharashtra.",
+        hero_btn_check:"Check Booking", hero_btn_contact:"Contact Us", hero_btn_gallery:"View Gallery",
+        scroll:"Scroll",
+
+        about_eyebrow:"About Us",
+        about_title_1:"The Legendary of", about_title_2:"Musical Exhilaration",
+        about_text:"New Golden Brass Band has been the heartbeat of celebrations across Deola and beyond. Our ensemble blends traditional brass mastery with contemporary energy, creating moments that resonate long after the last note fades.",
+        about_svc_weddings:"Weddings", about_svc_processions:"Marriage Processions",
+        about_svc_religious:"Religious Events", about_svc_cultural:"Cultural Events",
+        about_svc_special:"Special Celebrations", about_svc_other:"Other Events",
+
+        mom_eyebrow:"Movement of Motion", mom_title:"Moments in Motion",
+        mom_lead:"Every performance tells a story. Watch it unfold.",
+
+        services_eyebrow:"What We Offer", services_title:"Our Services",
+        services_lead:"From grand wedding processions to intimate cultural gatherings, we bring the perfect musical backdrop to every occasion.",
+        svc1_title:"Wedding Band",
+        svc1_text:"Elegant brass performances tailored for your special day, from the baraat to the reception.",
+        svc2_title:"Marriage Procession",
+        svc2_text:"High-energy processional music that keeps the celebration alive and moving.",
+        svc3_title:"Religious Programs",
+        svc3_text:"Devotional and traditional brass arrangements for spiritual ceremonies and festivals.",
+        svc4_title:"Cultural Programs",
+        svc4_text:"Authentic musical accompaniment for cultural events, fairs, and community gatherings.",
+        svc5_title:"Special Events",
+        svc5_text:"Customized performances for corporate events, inaugurations, and private celebrations.",
+        svc6_title:"Custom Event Booking",
+        svc6_text:"Have something unique in mind? We'll craft a bespoke musical experience just for you.",
+
+        booking_eyebrow:"Availability", booking_title:"Booking Dates",
+        booking_lead:"Check our live availability calendar. Green dates are open — secure yours before they're gone.",
+        legend_available:"Available", legend_booked:"Booked", legend_pending:"Pending",
+        checker_title:"Check Your Date",
+        checker_sub:"Select your event details to see real-time availability.",
+        field_event_date:"Event Date", field_event_location:"Event Location", field_event_type:"Event Type",
+        select_event_type:"Select event type",
+        evt_wedding:"Wedding", evt_procession:"Marriage Procession", evt_religious:"Religious Program",
+        evt_cultural:"Cultural Event", evt_special:"Special Celebration", evt_other:"Other",
+        checker_btn:"Check Availability",
+
+        orders_btn:"📋 Orders", orders_title:"Orders & Event Schedule", orders_close:"Close",
+        orders_empty_title:"No scheduled orders yet",
+        orders_empty_sub:"Confirmed orders will appear here as soon as they are scheduled.",
+
+        form_eyebrow:"Get in Touch", form_title:"Request Booking",
+        form_lead:"Fill out the form below and we'll get back to you within 24 hours.",
+        form_full_name:"Full Name", form_mobile:"Mobile Number", form_whatsapp:"WhatsApp Number",
+        form_event_date:"Event Date", form_event_type:"Event Type", form_event_time:"Approximate Event Time",
+        form_location:"Event Location", form_city:"City / Village", form_message:"Additional Message",
+        form_submit:"Send Booking Request",
+        form_success_title:"Your booking request has been received.",
+        form_success_text:"We'll review your request and get back to you shortly. Save your request ID:",
+        form_reset:"Submit Another Request",
+
+        contact_eyebrow:"Reach Out", contact_title:"Contact Us",
+        contact_lead:"We'd love to be part of your celebration. Get in touch with us today.",
+        contact_phone:"Phone", contact_whatsapp:"WhatsApp", contact_location:"Location",
+        contact_call_now:"Call Now", contact_call_sub:"Speak with us directly",
+        contact_wa:"WhatsApp", contact_wa_sub:"Chat with us instantly",
+        contact_ig:"Instagram", contact_ig_sub:"See our latest moments",
+        contact_yt:"YouTube", contact_yt_sub:"Watch our performances",
+
+        footer_desc:"Deola, Maharashtra, India — bringing the sound of celebration to every occasion.",
+        footer_links:"Quick Links", footer_connect:"Connect",
+        footer_location:"Deola, Maharashtra, India"
+      },
+      mr: {
+        nav_home:"मुख्यपृष्ठ", nav_about:"आमच्याविषयी", nav_gallery:"गॅलरी",
+        nav_services:"सेवा", nav_booking:"बुकिंग",
+        nav_contact:"संपर्क", nav_check_booking:"बुकिंग तपासा",
+
+        hero_title_1:"उत्सवाचा", hero_title_2:"आवाज",
+        hero_sub:"न्यू गोल्डन ब्रास बँड — लग्न, मिरवणूक, सांस्कृतिक उत्सव आणि विशेष कार्यक्रमांसाठी संपूर्ण महाराष्ट्रात अविस्मरणीय संगीत अनुभव.",
+        hero_btn_check:"बुकिंग तपासा", hero_btn_contact:"संपर्क करा", hero_btn_gallery:"गॅलरी पहा",
+        scroll:"स्क्रोल",
+
+        about_eyebrow:"आमच्याविषयी",
+        about_title_1:"संगीताचा", about_title_2:"अद्भुत वारसा",
+        about_text:"न्यू गोल्डन ब्रास बँड देवळा आणि परिसरातील उत्सवांचे हृदय आहे. आमचा गट पारंपरिक ब्रास परंपरा आणि आधुनिक ऊर्जा एकत्र करून असा क्षण घडवतो जो शेवटच्या सूरानंतरही मनात राहतो.",
+        about_svc_weddings:"लग्न", about_svc_processions:"लग्नाची मिरवणूक",
+        about_svc_religious:"धार्मिक कार्यक्रम", about_svc_cultural:"सांस्कृतिक कार्यक्रम",
+        about_svc_special:"विशेष उत्सव", about_svc_other:"इतर कार्यक्रम",
+
+        mom_eyebrow:"मूव्हमेंट ऑफ मोशन", mom_title:"गतिमान क्षण",
+        mom_lead:"प्रत्येक सादरीकरण एक कथा सांगते. ती पाहा.",
+
+        services_eyebrow:"आम्ही काय देऊ", services_title:"आमच्या सेवा",
+        services_lead:"भव्य लग्न मिरवणुकीपासून ते जिव्हाळ्याच्या सांस्कृतिक कार्यक्रमांपर्यंत — प्रत्येक प्रसंगाला योग्य संगीत.",
+        svc1_title:"वेडिंग बँड",
+        svc1_text:"तुमच्या खास दिवसासाठी बारातेपासून रिसेप्शनपर्यंत सुंदर ब्रास सादरीकरण.",
+        svc2_title:"लग्नाची मिरवणूक",
+        svc2_text:"उत्सवाला गतिमान ठेवणारे उच्च-ऊर्जा मिरवणूक संगीत.",
+        svc3_title:"धार्मिक कार्यक्रम",
+        svc3_text:"आध्यात्मिक विधी आणि सणांसाठी भक्ती व पारंपरिक ब्रास संगीत.",
+        svc4_title:"सांस्कृतिक कार्यक्रम",
+        svc4_text:"सांस्कृतिक कार्यक्रम, जत्रा व समुदाय मेळाव्यांसाठी अस्सल संगीत साथ.",
+        svc5_title:"विशेष कार्यक्रम",
+        svc5_text:"कॉर्पोरेट कार्यक्रम, उद्घाटन व खासगी उत्सवांसाठी सानुकूल सादरीकरण.",
+        svc6_title:"कस्टम इव्हेंट बुकिंग",
+        svc6_text:"काहीतरी वेगळं हवंय? आम्ही तुमच्यासाठी खास संगीत अनुभव तयार करू.",
+
+        booking_eyebrow:"उपलब्धता", booking_title:"बुकिंग तारखा",
+        booking_lead:"आमचे थेट उपलब्धता दिनदर्शिका पाहा. हिरव्या तारखा मोकळ्या आहेत — आधीच बुक करा.",
+        legend_available:"उपलब्ध", legend_booked:"बुक झाले", legend_pending:"प्रलंबित",
+        checker_title:"तुमची तारीख तपासा",
+        checker_sub:"उपलब्धता पाहण्यासाठी कार्यक्रमाची माहिती निवडा.",
+        field_event_date:"कार्यक्रमाची तारीख", field_event_location:"कार्यक्रमाचे ठिकाण",
+        field_event_type:"कार्यक्रमाचा प्रकार",
+        select_event_type:"कार्यक्रमाचा प्रकार निवडा",
+        evt_wedding:"लग्न", evt_procession:"लग्नाची मिरवणूक", evt_religious:"धार्मिक कार्यक्रम",
+        evt_cultural:"सांस्कृतिक कार्यक्रम", evt_special:"विशेष उत्सव", evt_other:"इतर",
+        checker_btn:"उपलब्धता तपासा",
+
+        orders_btn:"📋 ऑर्डर्स", orders_title:"ऑर्डर्स व कार्यक्रम वेळापत्रक", orders_close:"बंद करा",
+        orders_empty_title:"अद्याप कोणतीही ऑर्डर नाही",
+        orders_empty_sub:"पुष्टी झालेल्या ऑर्डर्स येथे दिसतील.",
+
+        form_eyebrow:"संपर्क साधा", form_title:"बुकिंगची विनंती",
+        form_lead:"खालील फॉर्म भरा, आम्ही 24 तासांत संपर्क करू.",
+        form_full_name:"पूर्ण नाव", form_mobile:"मोबाईल नंबर", form_whatsapp:"व्हॉट्सअ‍ॅप नंबर",
+        form_event_date:"कार्यक्रमाची तारीख", form_event_type:"कार्यक्रमाचा प्रकार",
+        form_event_time:"अंदाजे वेळ",
+        form_location:"कार्यक्रमाचे ठिकाण", form_city:"गाव / शहर", form_message:"अतिरिक्त संदेश",
+        form_submit:"बुकिंग विनंती पाठवा",
+        form_success_title:"तुमची बुकिंग विनंती मिळाली आहे.",
+        form_success_text:"आम्ही त्वरित संपर्क करू. तुमचा विनंती आयडी जतन करा:",
+        form_reset:"आणखी एक विनंती पाठवा",
+
+        contact_eyebrow:"संपर्क", contact_title:"आमच्याशी संपर्क करा",
+        contact_lead:"तुमच्या उत्सवाचा भाग होण्यास आम्हाला आवडेल. आजच संपर्क साधा.",
+        contact_phone:"फोन", contact_whatsapp:"व्हॉट्सअ‍ॅप", contact_location:"ठिकाण",
+        contact_call_now:"आता कॉल करा", contact_call_sub:"थेट बोला",
+        contact_wa:"व्हॉट्सअ‍ॅप", contact_wa_sub:"तात्काळ चॅट करा",
+        contact_ig:"इंस्टाग्राम", contact_ig_sub:"नवीन क्षण पाहा",
+        contact_yt:"यूट्यूब", contact_yt_sub:"आमची सादरीकरणे पाहा",
+
+        footer_desc:"देवळा, महाराष्ट्र, भारत — प्रत्येक प्रसंगी उत्सवाचा आवाज.",
+        footer_links:"महत्त्वाच्या लिंक्स", footer_connect:"जोडा",
+        footer_location:"देवळा, महाराष्ट्र, भारत"
+      }
+    };
+
+    const Lang = (() => {
+      const STORAGE_KEY = "ngb_lang";
+      let current = "en";
+
+      function apply(lang) {
+        if (!I18N[lang]) lang = "en";
+        current = lang;
+
+        document.documentElement.setAttribute("lang", lang === "mr" ? "mr" : "en");
+
+        $$("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const dict = I18N[lang];
+          if (dict && Object.prototype.hasOwnProperty.call(dict, key)) {
+            el.textContent = dict[key];
+          }
+        });
+
+        $$(".lang-btn").forEach((b) => {
+          b.classList.toggle("active", b.dataset.lang === lang);
+          b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+        });
+
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
+      }
+
+      function init() {
+        $$(".lang-btn").forEach((btn) => {
+          btn.addEventListener("click", () => apply(btn.dataset.lang));
+        });
+        let saved = "en";
+        try { saved = localStorage.getItem(STORAGE_KEY) || "en"; } catch (e) {}
+        apply(saved);
+      }
+
+      return { init, apply, get: () => current };
+    })();
+
+    /* ============================================================
+       Toast
+       ============================================================ */
+    const Toast = (() => {
+      const el = $('#toast');
+      let timer;
+      return {
+        show(msg, type = 'info', dur = 3800) {
+          clearTimeout(timer);
+          el.textContent = msg;
+          el.className = `toast show ${type}`;
+          timer = setTimeout(() => el.classList.remove('show'), dur);
+        },
+        success(m) { this.show(m, 'success'); },
+        error(m) { this.show(m, 'error', 5000); },
+        info(m) { this.show(m, 'info'); }
+      };
+    })();
+
+    const State = {
+      bookingDates: new Map(),
+      settings: {},
+      calendar: { month: new Date().getMonth(), year: new Date().getFullYear() },
+      lightboxOpen: false,
+      lightboxIndex: 0,
+      lightboxList: []
+    };
+
+    /* ============================================================
+       Navigation
+    ============================================================ */
+    (() => {
+      const nav = $('#nav'), toggle = $('#navToggle'), drawer = $('#drawer');
+      const closeDrawer = () => { drawer.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.classList.remove('no-scroll'); };
+      const openDrawer = () => { drawer.classList.add('open'); toggle.setAttribute('aria-expanded','true'); document.body.classList.add('no-scroll'); };
+
+      window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); }, { passive: true });
+      toggle.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+
+      $$('[data-scroll]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (!href || !href.startsWith('#')) return;
+          const target = document.querySelector(href);
+          if (!target) return;
+          e.preventDefault();
+          closeDrawer();
+          const navH = nav.offsetHeight || 72;
+          const top = target.getBoundingClientRect().top + window.scrollY - navH - 8;
+          window.scrollTo({ top, behavior: 'smooth' });
+        });
+      });
+    })();
+
+    /* ============================================================
+       Reveal observer
+    ============================================================ */
+    (() => {
+      if (!('IntersectionObserver' in window)) { $$('.reveal').forEach((el) => el.classList.add('in')); return; }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+      $$('.reveal:not(.in)').forEach((el) => observer.observe(el));
+    })();
+
+    /* ============================================================
+       Permanent images (logo / about / legendary)
+    ============================================================ */
+    function loadPermanentImages() {
+      const imgs = window.WEBSITE_IMAGES || {};
+      const bind = (id, url) => {
+        const el = document.getElementById(id);
+        if (el && url) el.src = url;
+      };
+      bind('heroNgbLogo',    imgs.ngbLogo);
+      bind('aboutUsPhoto',   imgs.aboutUs);
+      bind('legendaryPhoto', imgs.legendaryPhoto);
+    }
+
+    /* ============================================================
+       MOVEMENT OF MOTION — one-photo-at-a-time carousel
+       ------------------------------------------------------------
+       • Reads every <img> inside #momRail (see HTML above)
+       • Wraps each in a .mom-slide (each = 100% stage width)
+       • Exactly ONE complete photo visible at a time
+       • Auto-advances to next complete photo every 4.5s
+       • Arrow buttons jump between complete photos
+       • No half-photo bleed-through, no blank space
+       • Firebase is NOT used here
+       ============================================================ */
+    const MOM = (() => {
+      const INTERVAL_MS = 4500;   // auto-advance every 4.5s
+
+      let rail = null;
+      let sources = [];
+      let index = 0;
+      let timer = null;
+
+      function buildSlides(list) {
+        return list.map((src) => `
+          <div class="mom-slide">
+            <img src="${escapeHtml(src)}" alt="Movement of Motion" loading="eager" decoding="async" />
+          </div>
+        `).join('');
+      }
+
+      function applyTransform() {
+        rail.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
+      }
+
+      function goTo(i) {
+        if (!sources.length) return;
+        // wrap-around
+        index = ((i % sources.length) + sources.length) % sources.length;
+        applyTransform();
+      }
+
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+
+      function startAuto() {
+        stopAuto();
+        if (sources.length <= 1) return;
+        timer = setInterval(() => next(), INTERVAL_MS);
+      }
+
+      function stopAuto() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+
+      function init() {
+        rail = document.getElementById('momRail');
+        if (!rail) return;
+
+        // 1. Read every <img> the user added in the HTML
+        const authoredImgs = Array.from(rail.querySelectorAll('img'));
+        sources = authoredImgs.map((img) => img.getAttribute('src')).filter(Boolean);
+
+        if (!sources.length) {
+          rail.innerHTML = `<div class="mom-slide"><div class="mom-slide-empty">Add Movement of Motion photos in the HTML</div></div>`;
+          return;
+        }
+
+        // 2. Replace authored <img> with .mom-slide wrappers
+        rail.innerHTML = buildSlides(sources);
+
+        // 3. Broken image fallback
+        rail.querySelectorAll('img').forEach((img) => {
+          img.addEventListener('error', () => {
+            const parent = img.parentElement;
+            if (!parent || parent.querySelector('.mom-slide-empty')) return;
+            const ph = document.createElement('div');
+            ph.className = 'mom-slide-empty';
+            ph.textContent = 'Photo not found';
+            img.replaceWith(ph);
+          });
+        });
+
+        // 4. Initial position
+        index = 0;
+        applyTransform();
+
+        // 5. Arrow buttons — jump to next / previous complete photo
+        const prevBtn = document.getElementById('momPrev');
+        const nextBtn = document.getElementById('momNext');
+        if (prevBtn) {
+          prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prev();
+            startAuto();  // restart the timer so it doesn't jump right after
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            next();
+            startAuto();
+          });
+        }
+
+        // 6. Click a slide → open the lightbox with all photos
+        rail.querySelectorAll('.mom-slide').forEach((slide, i) => {
+          slide.addEventListener('click', () => {
+            openLightbox(i, sources);
+          });
+        });
+
+        // 7. Pause auto-advance while the user hovers (desktop)
+        const stage = document.getElementById('momStage');
+        if (stage) {
+          stage.addEventListener('mouseenter', stopAuto);
+          stage.addEventListener('mouseleave', startAuto);
+        }
+
+        // 8. Pause when the tab is hidden (saves CPU)
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) stopAuto();
+          else startAuto();
+        });
+
+        // 9. Start auto-advance
+        startAuto();
+      }
+
+      return { init, next, prev };
+    })();
+
+    /* ============================================================
+       Lightbox
+       ============================================================ */
+    function openLightbox(index, list) {
+      if (!list || !list.length) return;
+      State.lightboxList = list;
+      State.lightboxIndex = Math.max(0, Math.min(index, list.length - 1));
+      State.lightboxOpen = true;
+
+      const lb = $('#lightbox');
+      const img = $('#lbImg');
+      img.src = list[State.lightboxIndex];
+      img.alt = 'New Golden Brass Band';
+      $('#lbInfo .cat').textContent = '';
+      $('#lbInfo .name').textContent = '';
+      lb.classList.add('open');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeLightbox() {
+      State.lightboxOpen = false;
+      $('#lightbox').classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    }
+
+    function lbNext() {
+      if (!State.lightboxList.length) return;
+      State.lightboxIndex = (State.lightboxIndex + 1) % State.lightboxList.length;
+      $('#lbImg').src = State.lightboxList[State.lightboxIndex];
+    }
+    function lbPrev() {
+      if (!State.lightboxList.length) return;
+      State.lightboxIndex = (State.lightboxIndex - 1 + State.lightboxList.length) % State.lightboxList.length;
+      $('#lbImg').src = State.lightboxList[State.lightboxIndex];
+    }
+
+    (() => {
+      $('#lbClose').addEventListener('click', closeLightbox);
+      $('#lbPrev').addEventListener('click', (e) => { e.stopPropagation(); lbPrev(); });
+      $('#lbNext').addEventListener('click', (e) => { e.stopPropagation(); lbNext(); });
+      $('#lightbox').addEventListener('click', (e) => { if (e.target === e.currentTarget) closeLightbox(); });
+      document.addEventListener('keydown', (e) => {
+        if (!State.lightboxOpen) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lbPrev();
+        if (e.key === 'ArrowRight') lbNext();
+      });
+      let touchStart = 0;
+      $('#lightbox').addEventListener('touchstart', (e) => { touchStart = e.touches[0].clientX; }, { passive: true });
+      $('#lightbox').addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - touchStart;
+        if (Math.abs(dx) > 50) { dx < 0 ? lbNext() : lbPrev(); }
+      }, { passive: true });
+    })();
+
+    /* ============================================================
+       Site settings + hero media  (Firebase — data only)
+    ============================================================ */
+    function loadSiteSettings() {
+      onValue(dbRef(rtdb, 'site_settings/main'), (snap) => {
+        if (snap.exists()) { State.settings = snap.val(); applySettings(State.settings); }
+      }, (err) => console.warn('Site settings load failed:', err));
+    }
+
+    function applySettings(s) {
+      if (!s) return;
+      if (s.phone) {
+        const tel = String(s.phone).replace(/\s+/g, '');
+        const el = $('#cPhone'); if (el) el.innerHTML = `<a href="tel:${escapeHtml(tel)}">${escapeHtml(s.phone)}</a>`;
+        const ca = $('#callAction'); if (ca) ca.href = `tel:${tel}`;
+      }
+      if (s.whatsapp) {
+        const wa = String(s.whatsapp).replace(/\D/g, '');
+        const el = $('#cWhatsapp'); if (el) el.innerHTML = `<a href="https://wa.me/${wa}" target="_blank" rel="noopener">${escapeHtml(s.whatsapp)}</a>`;
+        const ca = $('#whatsappAction'); if (ca) ca.href = `https://wa.me/${wa}`;
+      }
+      if (s.address) { const el = $('#cAddress'); if (el) el.textContent = s.address; }
+      if (s.aboutText) { const el = $('#aboutText'); if (el) el.textContent = s.aboutText; }
+      if (s.instagram) { const a = $('#instagramAction'); if (a) a.href = s.instagram; const f = $('#fInstagram'); if (f) f.href = s.instagram; }
+      if (s.facebook) { const f = $('#fFacebook'); if (f) f.href = s.facebook; }
+      if (s.youtube) { const a = $('#youtubeAction'); if (a) a.href = s.youtube; const f = $('#fYoutube'); if (f) f.href = s.youtube; }
+      if (s.businessName) document.title = `${s.businessName} · The Sound of Celebration`;
+      if (s.heroMediaUrl) loadHeroMedia(s.heroMediaUrl);
+    }
+
+    function loadHeroMedia(url) {
+      const media = $('#heroMedia');
+      if (!media || !url) return;
+      const isVideo = /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(url);
+      if (isVideo) {
+        const v = document.createElement('video');
+        v.src = url; v.autoplay = true; v.muted = true; v.loop = true; v.playsInline = true;
+        v.oncanplay = () => media.classList.add('loaded');
+        v.onerror = () => media.classList.add('loaded');
+        media.innerHTML = ''; media.appendChild(v);
+      } else {
+        const img = document.createElement('img');
+        img.src = url; img.alt = 'New Golden Brass Band'; img.loading = 'eager';
+        img.onload = () => media.classList.add('loaded');
+        img.onerror = () => media.classList.add('loaded');
+        media.innerHTML = ''; media.appendChild(img);
+      }
+    }
+
+    /* ============================================================
+       Booking dates + Calendar  (Firebase — data only)
+    ============================================================ */
+    function loadBookingDates() {
+      onValue(dbRef(rtdb, 'booking_dates'), (snap) => {
+        State.bookingDates.clear();
+        snap.forEach((child) => {
+          const v = child.val() || {};
+          if (child.key) State.bookingDates.set(child.key, (v.status || 'AVAILABLE').toUpperCase());
+        });
+        renderCalendar();
+      }, (err) => { console.warn('Booking dates load failed:', err); renderCalendar(); });
+    }
+
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    function renderCalendar() {
+      const grid = $('#calGrid'), label = $('#calLabel');
+      if (!grid || !label) return;
+      const { year, month } = State.calendar;
+      label.textContent = `${MONTHS[month]} ${year}`;
+      const firstDow = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const daysInPrev = new Date(year, month, 0).getDate();
+      const todayKey = dateKey(new Date());
+      const parts = [];
+      DOW.forEach((d) => parts.push(`<div class="cal-dow">${d}</div>`));
+      for (let i = firstDow - 1; i >= 0; i--) parts.push(`<div class="cal-day other">${daysInPrev - i}</div>`);
+      for (let d = 1; d <= daysInMonth; d++) {
+        const key = `${year}-${pad(month + 1)}-${pad(d)}`;
+        const status = State.bookingDates.get(key) || 'AVAILABLE';
+        const cls = ['cal-day'];
+        if (key === todayKey) cls.push('today');
+        if (status === 'BOOKED') cls.push('booked');
+        else if (status === 'PENDING') cls.push('pending');
+        else cls.push('available');
+        parts.push(`<div class="${cls.join(' ')}" data-date="${key}" title="${key} — ${status}">${d}</div>`);
+      }
+      const totalCells = firstDow + daysInMonth;
+      const remaining = (7 - (totalCells % 7)) % 7;
+      for (let i = 1; i <= remaining; i++) parts.push(`<div class="cal-day other">${i}</div>`);
+      grid.innerHTML = parts.join('');
+      $$('.cal-day[data-date]', grid).forEach((day) => {
+        const key = day.dataset.date;
+        const status = State.bookingDates.get(key) || 'AVAILABLE';
+        if (status === 'AVAILABLE') {
+          day.addEventListener('click', () => {
+            $('#chkDate').value = key;
+            document.getElementById('check-date').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          });
+        }
+      });
+    }
+
+    /* ============================================================
+       Date checker  (Firebase — data only)
+    ============================================================ */
+    (() => {
+      const btn = $('#chkBtn'); if (!btn) return;
+      btn.addEventListener('click', async () => {
+        const dateVal = $('#chkDate').value;
+        const location = $('#chkLocation').value.trim();
+        const type = $('#chkType').value;
+        if (!dateVal) {
+          Toast.error(Lang.get() === 'mr' ? 'कृपया कार्यक्रमाची तारीख निवडा.' : 'Please select an event date.');
+          return;
+        }
+        const result = $('#availResult'), title = $('#availTitle'), detail = $('#availDetail');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> ' + (Lang.get() === 'mr' ? 'तपासत आहे…' : 'Checking…');
+        result.className = 'avail-result show';
+        title.textContent = '';
+        detail.textContent = '';
+        let status = 'AVAILABLE';
+        try {
+          const snap = await get(dbRef(rtdb, `booking_dates/${dateVal}`));
+          if (snap.exists()) {
+            const data = snap.val() || {};
+            status = (data.status || 'AVAILABLE').toUpperCase();
+          }
+        } catch (e) { console.warn('Date check failed:', e); }
+        const pretty = prettyDate(dateVal);
+        const isMr = Lang.get() === 'mr';
+        if (status === 'BOOKED') {
+          result.className = 'avail-result show booked';
+          title.innerHTML = '● ' + (isMr ? 'ही तारीख बुक झालेली आहे.' : 'This date is booked.');
+          detail.textContent = isMr
+            ? `${pretty} आधीच आरक्षित आहे. कृपया दुसरी तारीख निवडा.`
+            : `${pretty} is already reserved. Please choose another date.`;
+        } else if (status === 'PENDING') {
+          result.className = 'avail-result show pending';
+          title.innerHTML = '● ' + (isMr ? 'ही तारीख सध्या प्रलंबित आहे.' : 'This date is currently on hold.');
+          detail.textContent = isMr
+            ? `${pretty} वर प्रलंबित विनंती आहे. तपशिलासाठी संपर्क करा.`
+            : `${pretty} has a pending request. Contact us for details.`;
+        } else {
+          result.className = 'avail-result show available';
+          title.innerHTML = '● ' + (isMr ? 'ही तारीख उपलब्ध आहे.' : 'This date is available.');
+          detail.textContent = isMr
+            ? `${pretty} मोकळी आहे. तुम्ही बुकिंग विनंती पुढे करू शकता.`
+            : `${pretty} is open. You can proceed with a booking request.`;
+          $('#fDate').value = dateVal;
+          if (location) $('#fLocation').value = location;
+          if (type) $('#fType').value = type;
+        }
+        btn.disabled = false;
+        btn.textContent = isMr ? 'उपलब्धता तपासा' : 'Check Availability';
+      });
+    })();
+
+    /* ============================================================
+       Booking form  (Firebase — data only)
+    ============================================================ */
+    (() => {
+      const form = $('#bookingForm'), btn = $('#submitBtn'), success = $('#formSuccess');
+      if (!form) return;
+      const generateCode = () => {
+        const t = Date.now().toString(36).toUpperCase().slice(-5);
+        const r = Math.random().toString(36).toUpperCase().slice(2, 5);
+        return `NGB-${t}${r}`;
+      };
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const payload = {
+          requestCode: generateCode(),
+          fullName: $('#fName').value.trim(),
+          mobile: $('#fMobile').value.trim(),
+          whatsapp: $('#fWhatsapp').value.trim() || $('#fMobile').value.trim(),
+          eventDate: $('#fDate').value,
+          eventType: $('#fType').value,
+          eventLocation: $('#fLocation').value.trim(),
+          city: $('#fCity').value.trim(),
+          eventTime: $('#fTime').value,
+          message: $('#fMessage').value.trim(),
+          status: 'PENDING',
+          createdAt: Date.now()
+        };
+        const isMr = Lang.get() === 'mr';
+        if (!payload.fullName || payload.fullName.length < 2) { Toast.error(isMr ? 'कृपया पूर्ण नाव भरा.' : 'Please enter your full name.'); return; }
+        if (!payload.mobile || payload.mobile.replace(/\D/g, '').length < 8) { Toast.error(isMr ? 'कृपया वैध मोबाईल नंबर भरा.' : 'Please enter a valid mobile number.'); return; }
+        if (!payload.eventDate) { Toast.error(isMr ? 'कृपया कार्यक्रमाची तारीख निवडा.' : 'Please select an event date.'); return; }
+        if (!payload.eventType) { Toast.error(isMr ? 'कृपया कार्यक्रमाचा प्रकार निवडा.' : 'Please select an event type.'); return; }
+        if (!payload.eventLocation) { Toast.error(isMr ? 'कृपया कार्यक्रमाचे ठिकाण भरा.' : 'Please enter the event location.'); return; }
+        if (!payload.city) { Toast.error(isMr ? 'कृपया गाव/शहर भरा.' : 'Please enter the city or village.'); return; }
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> ' + (isMr ? 'पाठवत आहे…' : 'Submitting…');
+        try {
+          const snap = await get(dbRef(rtdb, `booking_dates/${payload.eventDate}`));
+          if (snap.exists()) {
+            const data = snap.val() || {};
+            const st = (data.status || 'AVAILABLE').toUpperCase();
+            if (st === 'BOOKED') {
+              Toast.error(isMr ? 'ही तारीख आधीच बुक आहे. दुसरी तारीख निवडा.' : 'This date is already booked. Please choose another date.');
+              btn.disabled = false;
+              btn.textContent = isMr ? 'बुकिंग विनंती पाठवा' : 'Send Booking Request';
+              return;
+            }
+          }
+        } catch (e) { console.warn('Pre-submit check failed:', e); }
+        try {
+          const requestsRef = dbRef(rtdb, 'booking_requests');
+          const newReqRef = push(requestsRef);
+          await set(newReqRef, { ...payload, id: newReqRef.key });
+          const dateNode = dbRef(rtdb, `booking_dates/${payload.eventDate}`);
+          const existing = await get(dateNode);
+          if (!existing.exists()) {
+            await set(dateNode, {
+              status: 'PENDING',
+              eventType: payload.eventType,
+              location: payload.city || payload.eventLocation,
+              createdAt: Date.now(),
+              updatedAt: Date.now()
+            });
+          }
+          form.style.display = 'none';
+          success.classList.add('show');
+          $('#successCode').textContent = payload.requestCode;
+          Toast.success(isMr ? 'बुकिंग विनंती मिळाली!' : 'Booking request received!');
+        } catch (err) {
+          console.error('Booking submit failed:', err);
+          Toast.error(isMr ? 'काहीतरी चुकले. पुन्हा प्रयत्न करा किंवा आमच्याशी संपर्क करा.' : 'Something went wrong. Please try again or contact us directly.');
+          btn.disabled = false;
+          btn.textContent = isMr ? 'बुकिंग विनंती पाठवा' : 'Send Booking Request';
+        }
+      });
+      const resetBtn = $('#resetForm');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          form.reset();
+          form.style.display = '';
+          success.classList.remove('show');
+          btn.disabled = false;
+          const isMr = Lang.get() === 'mr';
+          btn.textContent = isMr ? 'बुकिंग विनंती पाठवा' : 'Send Booking Request';
+        });
+      }
+    })();
+
+    /* ============================================================
+       Calendar nav
+    ============================================================ */
+    $('#calPrev').addEventListener('click', () => {
+      State.calendar.month--;
+      if (State.calendar.month < 0) { State.calendar.month = 11; State.calendar.year--; }
+      renderCalendar();
+    });
+    $('#calNext').addEventListener('click', () => {
+      State.calendar.month++;
+      if (State.calendar.month > 11) { State.calendar.month = 0; State.calendar.year++; }
+      renderCalendar();
+    });
+
+    /* ============================================================
+       Public orders panel  (Firebase — data only)
+    ============================================================ */
+    function loadOrders() {
+      const listEl = $('#ordersList');
+      if (!listEl) return;
+      onValue(dbRef(rtdb, 'orders'), (snap) => {
+        const items = [];
+        snap.forEach((c) => {
+          const v = c.val() || {};
+          const st = (v.status || 'CONFIRMED').toUpperCase();
+          if (st === 'CONFIRMED') items.push({ id: c.key, ...v });
+        });
+        items.sort((a, b) => (a.eventDate || '').localeCompare(b.eventDate || ''));
+        if (!items.length) {
+          const isMr = Lang.get() === 'mr';
+          listEl.innerHTML = `
+            <div class="empty" style="padding:28px 12px;display:grid;place-items:center;gap:12px;text-align:center;color:var(--text-3);">
+              <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid var(--glass-border);display:grid;place-items:center;font-size:1.4rem;opacity:0.6;">📋</div>
+              <h4 style="font-size:1rem;font-weight:600;color:var(--text-2);">${isMr ? 'अद्याप कोणतीही ऑर्डर नाही' : 'No scheduled orders yet'}</h4>
+              <p style="font-size:0.82rem;">${isMr ? 'पुष्टी झालेल्या ऑर्डर्स येथे दिसतील.' : 'Confirmed orders will appear here as soon as they are scheduled.'}</p>
+            </div>`;
+          return;
+        }
+        listEl.innerHTML = `
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            ${items.map(o => `
+              <div style="
+                display:flex;gap:14px;align-items:flex-start;
+                padding:14px 16px;border-radius:14px;
+                background:rgba(255,255,255,0.03);
+                border:1px solid var(--glass-border);">
+                <div style="
+                  width:10px;height:10px;border-radius:50%;
+                  background:var(--red);flex-shrink:0;margin-top:8px;
+                  box-shadow:0 0 12px rgba(248,113,113,0.6);"></div>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-weight:600;font-size:0.95rem;margin-bottom:2px;">
+                    ${escapeHtml(o.eventDate ? prettyDate(o.eventDate) : '—')} — ${escapeHtml(o.village || '—')}
+                  </div>
+                  <div style="font-size:0.82rem;color:var(--text-2);line-height:1.5;">
+                    ${o.name ? `<strong>${escapeHtml(o.name)}</strong>` : ''}
+                    ${o.details ? ` · ${escapeHtml(o.details)}` : ''}
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>`;
+      }, (err) => {
+        console.warn('Orders load failed:', err);
+        listEl.innerHTML = `<div style="padding:24px;text-align:center;color:var(--text-3);"><p>Could not load orders.</p></div>`;
+      });
+    }
+
+    function initOrdersToggle() {
+      const btn = $('#openOrdersBtn');
+      const closeBtn = $('#closeOrdersBtn');
+      const panel = $('#ordersPanel');
+      if (!btn || !panel) return;
+      btn.addEventListener('click', () => {
+        panel.style.display = 'block';
+        btn.style.display = 'none';
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          panel.style.display = 'none';
+          btn.style.display = '';
+        });
+      }
+    }
+
+    /* ============================================================
+       Bootstrap
+       ------------------------------------------------------------
+       NOTE: Firebase is used only for data/information.
+       Movement of Motion photos come ONLY from HTML <img> tags.
+       ============================================================ */
+    (() => {
+      $('#year').textContent = new Date().getFullYear();
+      const today = dateKey(new Date());
+      const chkDate = $('#chkDate'); if (chkDate) chkDate.min = today;
+      const fDate = $('#fDate'); if (fDate) fDate.min = today;
+
+      Lang.init();
+      loadPermanentImages();
+      MOM.init();                  // single-photo carousel — no Firebase
+      initOrdersToggle();
+      loadSiteSettings();          // Firebase — data only
+      loadBookingDates();          // Firebase — data only
+      loadOrders();                // Firebase — data only
+    })();
+  </script>
+</body>
+</html>
